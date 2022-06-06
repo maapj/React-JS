@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="note">
+        JavaScript textContent Demo!
+        <span style="display:none">Hidden Text!</span>
+        <!-- my comment -->
+    </div>
+    <div id="addText">
+    </div>
+
+    <script>
+        let note = document.getElementById('note'); // truy cập vào thẻ div có id="note"
+        console.log(note.textContent); // truy xuất và hiện thị text của note ra console.log
+
+        let addText = document.getElementById('addText'); // truy cập vào thẻ div có id="addText"
+        addText.textContent = 'This is a nấdasote'; // ghi vào nội dung mới  addText.textContent = newText
+    </script>
+
+</body>
+
+</html>

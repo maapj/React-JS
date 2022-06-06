@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label for="account">Account: </label>
+        <input type="text" id="account">
+        <p id="accountError"></p>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function regexpAccount(account){
+            regexp = /^[_a-z0-9]{6,}$/;
+            return regexp.test(account);
+        }
+        function formSubmit(event){
+            let accountInput = document.getElementById('account');
+            if (regexpAccount(accountInput.value) === false){
+                let accountError = document.getElementById('accountError');
+                accountError.innerHTML = 'Account is invalid, regexpAccount: '
+                 + regexpAccount(accountInput.value);
+                accountError.style.color = 'red';
+                accountError.style.borderColor = 'red';
+            }
+            event.preventDefault();
+        }
+
+        const form = document.getElementById('form');
+        form.addEventListener('submit', (event) => formSubmit(event));
+
+    </script>
+
+</body>
+</html>

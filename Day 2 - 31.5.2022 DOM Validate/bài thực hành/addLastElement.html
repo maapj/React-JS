@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript appendChild() Demo</title>
+</head>
+<body>
+    <!-- tạo một danh sách ul -->
+    <ul id="menu">
+    </ul>
+    
+    <script>
+        // tạo hàm (tạo 1 danh mục li rồi thêm vào đó value)
+        function createMenuItem(name) {
+            let li = document.createElement('li'); // tạo li
+            li.textContent = name; // thêm vào li đó value là đối số name
+            return li; // trả về hàng li
+        }
+        // get the ul#menu
+        const menu = document.querySelector('#menu'); //truy cập vào id=menu bằng bộ chọn querySelector
+        // add menu item
+        menu.appendChild(createMenuItem('Home')); //dùng hằng menu đã tạo để add giá trị name = "..."
+        menu.appendChild(createMenuItem('Services'));
+        menu.appendChild(createMenuItem('About Us'));
+    </script>
+
+    
+</body>
+</html>

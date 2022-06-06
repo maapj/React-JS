@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Services</li>
+    </ul>
+
+    <ul id="newText">
+        <li>Home</li>
+        <li>Services</li>
+    </ul>
+
+    <script>
+        // truy xuất vào thẻ lấy dữ liệu 
+        let menu = document.getElementById('menu');
+        console.log(menu.innerHTML);
+        
+        // ghi vào 1 nội dung mới 
+        let newText = document.getElementById('newText');
+        newText.innerHTML = "<li>chào mừng bạn đến với CGO</li><li>chào mừng bạn đến React JS</li>";
+        
+
+    </script>
+</body>
+</html>
